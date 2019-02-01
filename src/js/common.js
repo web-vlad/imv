@@ -23,28 +23,30 @@ $(document).ready(function() {
 
 
     // REVIEWS
-    $('.reviews').slick({
+    $('.slider-top').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: true,
+        //fade: true,
+        //variableWidth: true,
         speed: 1000,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
+        arrows: false,
         dots: false,
         //centerMode: true,
         //centerPadding: '4px',
         /*appendArrows: $('.b-nav'),
         prevArrow: '<button id="prev" type="button" class="slick-arrow--prev"></button>',
         nextArrow: '<button id="next" type="button" class="slick-arrow--next"></button>',*/
-        responsive: [
-            /*{
+        /*responsive: [
+            {
              breakpoint: 640,
              settings: {
              slidesToShow: 2
              //variableWidth: false,
              }
-             },*/
+             },
             {
                 breakpoint: 426,
                 settings: {
@@ -52,7 +54,7 @@ $(document).ready(function() {
                     variableWidth: false
                 }
             }
-        ]
+        ]*/
     });
 
 });

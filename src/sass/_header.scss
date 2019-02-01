@@ -260,6 +260,11 @@
         max-width: 576px;
     }
 }*/
+@media screen and (max-width: 1200px) {
+    .header .container {
+        max-width: 1200px;
+    }
+}
 @media screen and (max-width: 991px) {
     .header {
         padding-top: 12px;
