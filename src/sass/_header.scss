@@ -104,7 +104,7 @@
 .main-menu {
     position: relative;
     width: 100%;
-    padding: 25px 0 26px;
+    padding: 19px 0 20px;
     /*display: flex;
     display: -webkit-box;
     display: -webkit-flex;
@@ -117,22 +117,23 @@
     li {
         position: relative;
         display: inline-block;
-        margin: 0 18px;
+        /*margin: 0 18px;
         &:first-child {
             margin-left: 0;
         }
         &:last-child {
             margin-right: 0;
-        }
+        }*/
         a {
             font-weight: 300;
             font-size: 1.4rem;
             color: #f9fafb;
             text-transform: uppercase;
-            display: inline-block;
+            display: block;
+            padding: 6px 18px;
             @include link-transition();
             /*position: relative;*/
-            &:after {
+            /*&:after {
                 background: #dfb664;
                 position: absolute;
                 display: block;
@@ -144,22 +145,25 @@
                 @include scale-x();
                 @include transform-position();
                 @include all-transition();
-            }
+            }*/
             &:hover {
                 color: #dfb664;
             }
-            &:hover:after {
+            /*&:hover:after {
                 @include scale-x-hover();
+            }*/
+        }
+        &.active, &:hover {
+            a {
+                background: #dfb664;
+                color: #292929;
+                /*&:after {
+                    display: none;
+                }*/
             }
         }
-        &.active {
-            a {
-                color: #dfb664;
-                cursor: default;
-                &:after {
-                    display: none;
-                }
-            }
+        &.active:hover {
+            cursor: default;
         }
     }
     a {
@@ -294,7 +298,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 40px 0 20px;
+        padding: 50px 0 20px;
         margin: 0;
         width: 270px;
         height: 100%;
@@ -325,15 +329,15 @@
             border-bottom: 1px dotted #ddd;
             a {
                 font-weight: 400;
-                padding: 8px 0;
+                padding: 8px 5px 8px 10px;
                 line-height: 1.1em;
             }
         }
-        li:hover {
+        /*li:hover {
             a:after {
                 display: none;
             }
-        }
+        }*/
     }
     .main-menu .active a, .main-menu  a:hover {
         background: transparent;
