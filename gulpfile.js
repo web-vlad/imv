@@ -56,7 +56,7 @@ gulp.task("html", function() {
 // Combine, compile Sass in CSS, install Vend. prefixes and further minimization of the code
 gulp.task("sass", function() {
     return gulp.src("src/sass/*.scss")
-        .pipe(plumber())
+        //.pipe(plumber())
         .pipe(sourcemaps.init())
         //.pipe(concat('style.scss'))
         .pipe(sass())
@@ -66,7 +66,7 @@ gulp.task("sass", function() {
         }))*/
         //.pipe(cssnano())
         .pipe(sourcemaps.write())
-        .pipe(plumber.stop())
+        //.pipe(plumber.stop())
         //.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("build/css"));
 });
@@ -88,7 +88,7 @@ gulp.task("libs-css", function() {
 gulp.task("libs-js", function() {
     return gulp.src("src/libs/*.js") // директория откуда брать исходники
         .pipe(concat('scripts.js')) // объеденим все js-файлы в один
-        .pipe(uglify()) // вызов плагина uglify - сжатие кода
+        //.pipe(uglify()) // вызов плагина uglify - сжатие кода
         .pipe(rename({ suffix: '.min' })) // вызов плагина rename - переименование файла с приставкой .min
         .pipe(gulp.dest("src/js")); // директория продакшена, т.е. куда сложить готовый файл
 });
